@@ -56,3 +56,5 @@ Check up whatsapp image - uploaded
 - Callback Queue & Microtask Queue: Once asynchronous tasks are completed, their callbacks are placed in the queue.
 - - Microtasks (Promises, process.nextTick in Node.js) are prioritized over macrotasks (setTimeout, setInterval).
 -  Event Loop: It constantly checks if the call stack is empty and pushes queued callbacks for execution.
+
+# 
