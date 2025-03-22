@@ -14,12 +14,28 @@
 - ✅ Do not disable CORS security in production.
 
 # What is NodeJs?
-- Javascript runtime environment
-- Run javascript not only browser even run anywhere.
+
+- Node.js is an open-source, cross-platform JavaScript runtime environment that allows developers to run JavaScript outside the browser, mainly on servers.
 - NodeJs use V8 and V8 is JS engine build by google that run javascript in browser.
 - Engine mean: Engine take js code and node use and its compile js code in machine code.
-- V8 written in C++ language.
+- V8 written in C++ language
+- ✅ Built on Chrome’s V8 engine – Fast execution of JavaScript.
+- ✅ Single-threaded, event-driven, and non-blocking – Handles multiple requests efficiently.
+- ✅ Uses an asynchronous I/O model – Perfect for real-time applications like chat apps, APIs, and streaming services.
 <img width="780" alt="node js 2025-03-21 at 4 13 19 PM" src="https://github.com/user-attachments/assets/1eb1f606-7e41-4680-85bf-1604b939a18c" />
+
+###  Why Use Node.js?
+-  Scalable & lightweight – Ideal for microservices and APIs.
+-  Fast performance – Uses the V8 engine for high-speed execution.
+-  Non-blocking I/O – Handles thousands of concurrent connections.
+-  Full-stack JavaScript – Use JavaScript on both frontend & backend.
+
+### difference between Browser and Nodejs run time environment:
+- Browser can access DOM operation but nodejs can't.
+- Runs JavaScript in the browser for frontend applications. Nodejs Runs JavaScript on the server for backend applications.
+- Browser : DOM, BOM, Web APIs (e.g., document, window, fetch). Nodejs: Built-in Module (http, os fs etc)
+- BrowserL ❌ No direct access to files. Nodejs: ✅ Full access using the fs module.
+
 
 # Event loop
 - The event loop in JavaScript is a mechanism that handles asynchronous operations. JavaScript is single-threaded, meaning it executes code sequentially in a single call stack.
