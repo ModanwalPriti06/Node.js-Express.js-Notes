@@ -78,4 +78,9 @@ Check up whatsapp image - uploaded
 
 # Loading Module
 
+| **Type** | **Description** | **Example** | 
+| ------------ | ---------------| ------------ |
+| Built-in Modules|	Pre-installed Node.js modules. |	fs, http, path, crypto |
+| Local Modules	| Custom modules created in the project.	| require("./myModule") |
+| Third-party Modules |	Installed using npm. | express, mongoose, cors |
 
