@@ -76,7 +76,7 @@ Check up whatsapp image - uploaded
 - - Microtasks (Promises, process.nextTick in Node.js) are prioritized over macrotasks (setTimeout, setInterval).
 -  Event Loop: It constantly checks if the call stack is empty and pushes queued callbacks for execution.
 
-# Loading Module
+#  Types of Modules in Node.js
 
 | **Type** | **Description** | **Example** | 
 | ------------ | ---------------| ------------ |
@@ -84,3 +84,20 @@ Check up whatsapp image - uploaded
 | Local Modules	| Custom modules created in the project.	| require("./myModule") |
 | Third-party Modules |	Installed using npm. | express, mongoose, cors |
 
+# Difference Between CommonJS (require()) and ESM (import)
+
+| **Feature** | **CommonJS (require)** | **ES Modules (import)** | 
+| ------------ | ---------------| ------------ |
+|  Default in Node.js | 	✅ Yes	| ❌ No (Needs "type": "module")| 
+| Execution| 	Synchronous| 	Asynchronous| 
+| Can Load Dynamically?| 	❌ No| 	✅ Yes (Using import())| 
+| Usage	| Used in older projects	| Recommended for modern projects| 
+
+# Dynamic Module Import (Lazy Loading)
+- ES Modules allow lazy loading using import().
+
+#### Summary of Module above:
+- ✔ Built-in Modules → Use require("module").
+- ✔ Custom Modules → Use require("./file") (CommonJS) or import (ESM).
+- ✔ Third-Party Modules → Install via npm install module-name.
+- ✔ Use import() for lazy loading in ES Modules.
