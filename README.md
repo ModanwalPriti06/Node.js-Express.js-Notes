@@ -79,7 +79,10 @@ Check up whatsapp image - uploaded
 -  Event Loop: It constantly checks if the call stack is empty and pushes queued callbacks for execution.
 
 ## Single-threaded
+- A single-threaded system means that it uses only one thread to execute tasks at a time. A thread is the smallest unit of execution in a process, and in a single-threaded model, tasks are executed sequentially on a single main thread.
+  
 ## Non-blocking I/O
+- 
 
 # Types of Modules in Node.js
 
@@ -107,5 +110,5 @@ Check up whatsapp image - uploaded
 - ✔ Third-Party Modules → Install via npm install module-name.
 - ✔ Use import() for lazy loading in ES Modules.
 
-# Node.js Architecture (Single-threaded, Event Loop, Non-blocking I/O)
+
 
