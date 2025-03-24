@@ -36,11 +36,13 @@
 - Browser : DOM, BOM, Web APIs (e.g., document, window, fetch). Nodejs: Built-in Module (http, os fs etc)
 - BrowserL ❌ No direct access to files. Nodejs: ✅ Full access using the fs module.
 
-### Window Vs Global Objec
+### Window Vs Global Object
 - The javascript global object for the browser is window and for the nodejs is global
 - The window object contain the method and property available only inthe browser environment.
 
-# Event loop
+# Node.js Architecture (Single-threaded, Event Loop, Non-blocking I/O)
+
+## Event loop
 - The event loop in JavaScript is a mechanism that handles asynchronous operations. JavaScript is single-threaded, meaning it executes code sequentially in a single call stack.
 - Everything in Javascript happened in execution context.
 ```
@@ -76,7 +78,10 @@ Check up whatsapp image - uploaded
 - - Microtasks (Promises, process.nextTick in Node.js) are prioritized over macrotasks (setTimeout, setInterval).
 -  Event Loop: It constantly checks if the call stack is empty and pushes queued callbacks for execution.
 
-#  Types of Modules in Node.js
+## Single-threaded
+## Non-blocking I/O
+
+# Types of Modules in Node.js
 
 | **Type** | **Description** | **Example** | 
 | ------------ | ---------------| ------------ |
@@ -101,3 +106,6 @@ Check up whatsapp image - uploaded
 - ✔ Custom Modules → Use require("./file") (CommonJS) or import (ESM).
 - ✔ Third-Party Modules → Install via npm install module-name.
 - ✔ Use import() for lazy loading in ES Modules.
+
+# Node.js Architecture (Single-threaded, Event Loop, Non-blocking I/O)
+
