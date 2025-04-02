@@ -137,4 +137,6 @@ Check up whatsapp image - uploaded
 - An available thread picks up the task and executes it.
 - Once the task is complete, the thread is returned to the pool for reuse.
 
+# Pooling
+
 
