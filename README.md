@@ -111,4 +111,30 @@ Check up whatsapp image - uploaded
 - ✔ Use import() for lazy loading in ES Modules.
 
 
+# Non-Blocking I/O Vs Blocking I/O:
+- Non-blocking means working with multiple request without blocking the thread for a single request.
+  - Faster & efficient – Uses callbacks, promises, or async/await to handle responses later.
+- Blocking - Executes synchronously: The process waits until an I/O operation (file read, DB query) completes.
+   - Slower performance – One operation blocks others until it finishes.
+
+# Concept of Libuv
+- Libuv is an open-source libarary built-in C, It has a strong focus on asynchronous and I/O. This give node access tothe underlying computer OS, filesystem and networking.
+- ode.js uses libuv to manage a thread pool for handling heavy tasks like file system operations, cryptography, and networking.
+- Libuv implement two extrenely important feature of node.js
+  - Event Loop
+  - Thread Pool
+
+# How Node JS Work 
+<img width="400" height="600" alt="node js 2025-03-21 at 4 13 19 PM" src="https://github.com/user-attachments/assets/fcd6160a-29d6-4a8a-b8e8-0fb522923bd5" />
+
+## Thread Pool 
+- A thread pool is a collection of pre-initialized worker threads that can be reused to perform multiple tasks instead of creating new threads every time.
+- The default thread pool size in Node.js is 4 (configurable via UV_THREADPOOL_SIZE).
+- We can change thread pool size - process.ev.UV_THREADPOOL_SIZE = 7;
+  
+### How it Works?
+- A task is assigned to the thread pool.
+- An available thread picks up the task and executes it.
+- Once the task is complete, the thread is returned to the pool for reuse.
+
 
