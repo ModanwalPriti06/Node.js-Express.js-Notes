@@ -130,7 +130,7 @@ Check up whatsapp image - uploaded
 ## Thread Pool 
 - A thread pool is a collection of pre-initialized worker threads that can be reused to perform multiple tasks instead of creating new threads every time.
 - The default thread pool size in Node.js is 4 (configurable via UV_THREADPOOL_SIZE).
-- We can change thread pool size - process.ev.UV_THREADPOOL_SIZE = 7;
+- We can change thread pool size - process.ev.UV_THREADPOOL_SIZE = 7 (based on CPU core);
   
 ### How it Works?
 - A task is assigned to the thread pool.
