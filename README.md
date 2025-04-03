@@ -1,4 +1,13 @@
-# Node.js - Notes
+#Index
+## Core Node.js Concepts
+- 🔹 Node.js Modules (CommonJS vs. ES Modules)
+- 🔹 Built-in Modules (fs, path, http, crypto, events, os, etc.)
+- 🔹 Global Objects (__dirname, __filename, process, etc.)
+- 🔹 Asynchronous Programming (Callbacks, Promises, Async/Await)
+- 🔹 The Event Loop and Event-Driven Architecture
+- 🔹 Streams & Buffers (Readable, Writable, Duplex, Transform Streams)
+- 🔹 Working with File System (fs module)
+---
 
 # CORS (Cross-Origin Resource Sharing)
 - CORS errors occur when a web application running on one domain (origin) tries to fetch resources (API, fonts, scripts) from another domain without proper permissions.
