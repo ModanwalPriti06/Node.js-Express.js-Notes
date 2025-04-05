@@ -79,7 +79,7 @@ End
 2. Code Component (Thread of Execution) = Just like whole code executed in thread run **one line at the time** (means one time can run one line only) that's why js is synchronous single threaded code component. 
 
 ### How it works:
-Check up whatsapp image - uploaded
+<img width="400" height="600" alt="node js 2025-03-21 at 4 13 19 PM" src="https://github.com/user-attachments/assets/b4777e64-6aee-41be-adab-688ba2b67a5f" />
 - Call Stack: JavaScript executes synchronous code line by line, pushing and popping function calls from the stack. Every time bottom of the stack have Execution context, means whenever js program is run this callstack populate this global execution context (GEC).
 - Call stack maintain the order of execution of execution context.
 - Web APIs: Asynchronous tasks like setTimeout, fetch, or event listeners are handled by Web APIs.
@@ -89,9 +89,6 @@ Check up whatsapp image - uploaded
 
 ## Single-threaded
 - A single-threaded system means that it uses only one thread to execute tasks at a time. A thread is the smallest unit of execution in a process, and in a single-threaded model, tasks are executed sequentially on a single main thread.
-  
-## Non-blocking I/O
-- 
 
 # Types of Modules in Node.js
 
@@ -147,5 +144,10 @@ Check up whatsapp image - uploaded
 - Once the task is complete, the thread is returned to the pool for reuse.
 
 # Pooling
+<img width="400" height="600" alt="node js 2025-03-21 at 4 13 19 PM" src="https://github.com/user-attachments/assets/617ae81a-f668-460b-a4c7-737d35542840" />
+
+### Short Poooling - 
+
+
 
 
