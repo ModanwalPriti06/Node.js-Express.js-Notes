@@ -146,7 +146,16 @@ End
 # Pooling
 <img width="400" height="600" alt="node js 2025-03-21 at 4 13 19 PM" src="https://github.com/user-attachments/assets/617ae81a-f668-460b-a4c7-737d35542840" />
 
-### Short Poooling - 
+## Proxy
+- A proxy acts as an intermediary between a client and a server.
+- In Networking: A proxy server is a system or router that acts as a gateway between you and the internet. It’s used for:
+  - Hiding your IP address
+  - Improving security
+  - Controlling internet usage (like in schools or offices).
+  - Caching frequently accessed websites for speed.
+<img width="400" height="400" alt="node js 2025-03-21 at 4 13 19 PM" src="https://github.com/user-attachments/assets/415c1eaa-2b35-4fb7-9598-9b68df94e252" />
+
+
 
 
 
