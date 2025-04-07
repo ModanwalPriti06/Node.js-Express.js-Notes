@@ -157,8 +157,8 @@ End
   - Controlling internet usage (like in schools or offices).
   - Caching frequently accessed websites for speed.
 <img width="400" height="400" alt="node js 2025-03-21 at 4 13 19 PM" src="https://github.com/user-attachments/assets/415c1eaa-2b35-4fb7-9598-9b68df94e252" />
-<img  width="400" height="400" alt="Screenshot 2025-04-07 at 10 13 18 PM" src="https://github.com/user-attachments/assets/7f8888ef-0eda-4dbd-98e2-308dab08a139" />
-<img  width="400" height="400" alt="Screenshot 2025-04-07 at 10 13 18 PM" src="https://github.com/user-attachments/assets/bfe5f100-3aa6-492a-b166-e7a9ec3e254e" />
+<img  width="500" height="400" alt="Screenshot 2025-04-07 at 10 13 18 PM" src="https://github.com/user-attachments/assets/7f8888ef-0eda-4dbd-98e2-308dab08a139" />
+<img  width="500" height="400" alt="Screenshot 2025-04-07 at 10 13 18 PM" src="https://github.com/user-attachments/assets/bfe5f100-3aa6-492a-b166-e7a9ec3e254e" />
 
 
 
