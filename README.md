@@ -79,12 +79,13 @@ End
 2. Code Component (Thread of Execution) = Just like whole code executed in thread run **one line at the time** (means one time can run one line only) that's why js is synchronous single threaded code component. 
 
 ### How it works:
-<img width="400" height="600" alt="node js 2025-03-21 at 4 13 19 PM" src="https://github.com/user-attachments/assets/b4777e64-6aee-41be-adab-688ba2b67a5f" />
+<img width="400" height="600" alt="node js 2025-03-21 at 4 13 19 PM" src="https://github.com/user-attachments/assets/b4777e64-6aee-41be-adab-688ba2b67a5f"/>
+
 - Call Stack: JavaScript executes synchronous code line by line, pushing and popping function calls from the stack. Every time bottom of the stack have Execution context, means whenever js program is run this callstack populate this global execution context (GEC).
 - Call stack maintain the order of execution of execution context.
 - Web APIs: Asynchronous tasks like setTimeout, fetch, or event listeners are handled by Web APIs.
 - Callback Queue & Microtask Queue: Once asynchronous tasks are completed, their callbacks are placed in the queue.
-- - Microtasks (Promises, process.nextTick in Node.js) are prioritized over macrotasks (setTimeout, setInterval).
+-  Microtasks (Promises, process.nextTick in Node.js) are prioritized over macrotasks (setTimeout, setInterval).
 -  Event Loop: It constantly checks if the call stack is empty and pushes queued callbacks for execution.
 
 ## Single-threaded
@@ -156,9 +157,15 @@ End
   - Improving security
   - Controlling internet usage (like in schools or offices).
   - Caching frequently accessed websites for speed.
+
 <img width="400" height="400" alt="node js 2025-03-21 at 4 13 19 PM" src="https://github.com/user-attachments/assets/415c1eaa-2b35-4fb7-9598-9b68df94e252" />
 <img  width="500" height="400" alt="Screenshot 2025-04-07 at 10 13 18 PM" src="https://github.com/user-attachments/assets/7f8888ef-0eda-4dbd-98e2-308dab08a139" />
+
+- An isolated client uses a forward proxy.
+
 <img  width="500" height="400" alt="Screenshot 2025-04-07 at 10 13 18 PM" src="https://github.com/user-attachments/assets/bfe5f100-3aa6-492a-b166-e7a9ec3e254e" />
+
+- An isolated client uses a forward proxy.
 
 
 
