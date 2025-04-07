@@ -90,7 +90,7 @@ End
 ## Single-threaded
 - A single-threaded system means that it uses only one thread to execute tasks at a time. A thread is the smallest unit of execution in a process, and in a single-threaded model, tasks are executed sequentially on a single main thread.
 
-# Types of Modules in Node.js
+# Types of Modules in Node.js : Built-in , Local, Third-Party
 
 | **Type** | **Description** | **Example** | 
 | ------------ | ---------------| ------------ |
@@ -115,7 +115,6 @@ End
 - ✔ Custom Modules → Use require("./file") (CommonJS) or import (ESM).
 - ✔ Third-Party Modules → Install via npm install module-name.
 - ✔ Use import() for lazy loading in ES Modules.
-
 
 # Non-Blocking I/O Vs Blocking I/O:
 - Non-blocking means working with multiple request without blocking the thread for a single request.
