@@ -144,6 +144,10 @@ End
 
 # Pooling
 <img width="400" height="600" alt="node js 2025-03-21 at 4 13 19 PM" src="https://github.com/user-attachments/assets/617ae81a-f668-460b-a4c7-737d35542840" />
+- Short Pooling: In the short pooling when client req server then server wait for res for some time and then return response either data or empty payload.
+- Long Pooling: In Long pooling when client req to server then server return res only when data is there if data is not there then your req is open untill you are not getting response. After response he will again req and open that one for next response.
+- **Example** can say - Group of channel in whatsapp when One user change dp u also get notification from server that time you are not req but still got response. 
+- Web shocket: Bi-directional relationship b/w the client and server. When Client req then server response (Whatsapp Chat)
 
 ## Proxy
 - A proxy acts as an intermediary between a client and a server.
