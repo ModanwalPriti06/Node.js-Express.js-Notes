@@ -145,6 +145,7 @@ End
   
 # Pooling
 <img width="400" height="600" alt="node js 2025-03-21 at 4 13 19 PM" src="https://github.com/user-attachments/assets/617ae81a-f668-460b-a4c7-737d35542840" />
+
 - Short Pooling: In the short pooling when client req server then server wait for res for some time and then return response either data or empty payload.
 - Long Pooling: In Long pooling when client req to server then server return res only when data is there if data is not there then your req is open untill you are not getting response. After response he will again req and open that one for next response.
 - **Example** can say - Group of channel in whatsapp when One user change dp u also get notification from server that time you are not req but still got response. 
@@ -166,6 +167,10 @@ End
 <img  width="500" height="400" alt="Screenshot 2025-04-07 at 10 13 18 PM" src="https://github.com/user-attachments/assets/bfe5f100-3aa6-492a-b166-e7a9ec3e254e" />
 
 - An isolated client uses a forward proxy.
+
+# Module in Node JS
+- Module - When divide code small-2 part that is called modular coding.
+  
 
 
 
