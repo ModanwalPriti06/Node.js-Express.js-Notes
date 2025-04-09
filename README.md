@@ -91,13 +91,20 @@ End
 ## Single-threaded
 - A single-threaded system means that it uses only one thread to execute tasks at a time. A thread is the smallest unit of execution in a process, and in a single-threaded model, tasks are executed sequentially on a single main thread.
 
+# Module in Node JS
+- Module - When divide code small-2 part that is called modular coding.
+- A module in Node.js is a reusable block of code (functions, objects, variables, etc.) that can be exported from one file and imported into another.
+- Clean and maintainable code
+- Reusability
+- Easy debugging and testing
+  
 # Types of Modules in Node.js : Built-in , Local, Third-Party
 
 | **Type** | **Description** | **Example** | 
 | ------------ | ---------------| ------------ |
-| Built-in Modules|	Pre-installed Node.js modules. |	fs, http, path, crypto |
-| Local Modules	| Custom modules created in the project.	| require("./myModule") |
-| Third-party Modules |	Installed using npm. | express, mongoose, cors |
+| Built-in Modules|	Pre-installed Node.js modules. |	fs, http, path, crypto, os, url |
+| Local Modules/ User-defined Modules | Custom modules created in the project.	| require("./myModule") |
+| Third-party Modules |	Installed using npm. | express, mongoose, cors , lodash |
 
 # Difference Between CommonJS (require()) and ESM (import)
 
@@ -168,8 +175,14 @@ End
 
 - An isolated client uses a forward proxy.
 
-# Module in Node JS
-- Module - When divide code small-2 part that is called modular coding.
+  ---
+  ---
+  ---
+  
+ # Express JS
+
+
+
   
 
 
