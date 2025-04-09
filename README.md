@@ -238,6 +238,10 @@ fs.mkdir('newFolder', (err) => {
  reader.pipe(writer); // sends data chunk by chunk
 ```
 
+## 💡 In Real Life:
+- Buffer is like downloading the whole movie before watching.
+- Stream is like watching a movie while it's still downloading.
+
 # Multer
 
   ---
