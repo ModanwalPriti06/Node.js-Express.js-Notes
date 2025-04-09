@@ -279,6 +279,12 @@ fs.mkdir('newFolder', (err) => {
 
 ## Type of Middleware
 
+1. Applications-level Middleware (app.use)
+2. Router level Middleware (router.use)
+3. Built-in level Middleware (express.static, express.json, express.unlencoded)
+4. Error handling Middleware ( app.use(err, req, res, next) )
+5. Third-party Middleware ( bodyparser, cookie parser ) 
+
 
   
 
