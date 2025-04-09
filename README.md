@@ -251,7 +251,25 @@ fs.mkdir('newFolder', (err) => {
  # Express JS
 
 ### What is Express jS?
-- 
+- Express.js is a minimal and flexible Node.js web application framework that helps you build web servers and APIs quickly and efficiently.
+
+### Why Use Express?
+- Simplifies creating routes (GET, POST, etc.)
+- Easily handle request and response objects.
+- Supports middleware for functionality like logging, authentication, and error handling.
+- Works great with MongoDB, PostgreSQL, and other databases.
+```
+  const express = require('express');
+  const app = express();
+  
+  app.get('/', (req, res) => {
+    res.send('Hello from Express!');
+  });
+  
+  app.listen(3000, () => {
+    console.log('Server running on http://localhost:3000');
+  });
+```
 
   
 
