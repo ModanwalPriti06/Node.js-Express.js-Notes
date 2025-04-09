@@ -254,10 +254,13 @@ fs.mkdir('newFolder', (err) => {
 - Express.js is a minimal and flexible Node.js web application framework that helps you build web servers and APIs quickly and efficiently.
 
 ### Why Use Express?
-- Simplifies creating routes (GET, POST, etc.)
+- Routing - Simplifies creating routes (GET, POST, etc.)
 - Easily handle request and response objects.
-- Supports middleware for functionality like logging, authentication, and error handling.
+- Middleware- Supports middleware for functionality like logging, authentication, and error handling.
 - Works great with MongoDB, PostgreSQL, and other databases.
+- Error Handling
+- RESTful API
+  
 ```
   const express = require('express');
   const app = express();
@@ -270,6 +273,12 @@ fs.mkdir('newFolder', (err) => {
     console.log('Server running on http://localhost:3000');
   });
 ```
+# Middleware
+- Middleware is a function that has access to the request (req), response (res), and the next middleware in the request-response cycle.
+- next() - This function is used to execute the other midddleware function succeeding the current middleware.
+
+## Type of Middleware
+
 
   
 
