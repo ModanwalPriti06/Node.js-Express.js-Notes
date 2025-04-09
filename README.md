@@ -7,6 +7,9 @@
 - 🔹 The Event Loop and Event-Driven Architecture
 - 🔹 Streams & Buffers (Readable, Writable, Duplex, Transform Streams)
 - 🔹 Working with File System (fs module)
+- 🔹 Multer
+- 🔹 Express Js
+
 ---
 
 # CORS (Cross-Origin Resource Sharing)
@@ -175,13 +178,76 @@ End
 
 - An isolated client uses a forward proxy.
 
+#  Working with File System (fs module)
+- The fs module in Node.js allows you to interact with the file system — like reading, writing, updating, deleting files and directories.
+- Read File
+  ```
+  const fs = require('fs');
+  fs.readFile('file.txt', 'utf8', (err, data) => {
+    if (err) throw err;
+    console.log(data);
+  });
+  ```
+- Write File
+```
+  fs.writeFile('file.txt', 'Hello, World!', (err) => {
+    if (err) throw err;
+    console.log('File written');
+  });
+```
+- Append File
+```
+  fs.appendFile('file.txt', '\nNew Line', (err) => {
+    if (err) throw err;
+  });
+```
+-  Delete File
+```
+  fs.unlink('file.txt', (err) => {
+    if (err) throw err;
+    console.log('File deleted');
+  });
+```
+- Create Folder
+```
+fs.mkdir('newFolder', (err) => {
+  if (err) throw err;
+});
+```
+- Check if File Exists
+```
+ fs.existsSync('file.txt'); // returns true or false
+```
+#### 🧠 Bonus: 
+- Use fs.promises for promise-based operations (with async/await)
+- Use path module to handle file paths safely
+  
+# Buffer and Stream
+- A Buffer is a temporary storage in memory used to hold binary data (like files, images, videos, etc.) when you’re dealing with raw data.
+- A Stream is a sequence of data chunks being transferred over time (bit-by-bit), rather than loading everything into memory at once.
+## Why Streams?
+- Efficient: Don’t need to load entire file into memory.
+- Great for large files: e.g., video streaming, file downloads/uploads.
+
+## 4 Types of Streams:
+1. Readable – e.g., fs.createReadStream()
+2. Writable – e.g., fs.createWriteStream()
+3. Duplex – both readable and writable (e.g., TCP sockets)
+4. Transform – a special duplex stream for modifying data (e.g., gzip)
+```
+ reader.pipe(writer); // sends data chunk by chunk
+```
+
+# Multer
+
   ---
   ---
   ---
   
  # Express JS
 
-
+### What is Express jS?
+- 
 
   
 
