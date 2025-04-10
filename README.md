@@ -429,5 +429,39 @@ app.post('/upload', upload.single('file'), (req, res) => {
 | PUT |	Update existing data |
 | DELETE | Remove data |
 
+## Export and Import Module
+- In Node.js (and JavaScript), export is used to make variables/functions accessible to other files, and import is used to bring them in.
+
+### 1. CommonJS (default in Node.js)
+ Use module.exports and require()
+ ```
+  module.exports = add;
+```
+```
+const add = require('./math');
+```
+
+### 2. ES Modules (ESM)
+Use export / export default and import
+
+- Named Export
+```
+export const add = (a, b) => a + b;
+export const sub = (a, b) => a - b;
+```
+- Named Import
+```
+import { add, sub } from './math.js';
+```
+- Default Export
+```
+export default function greet(name) {
+  return `Hello, ${name}`;
+}
+```
+- Default Named
+```
+import greet from './greet.js';
+```
 
 
