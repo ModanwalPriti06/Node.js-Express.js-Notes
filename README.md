@@ -343,8 +343,91 @@ app.use('/api', router);
 app.listen(3000, () => console.log('Server running'));
 
 ```
+## Built-in Middleware
+1. express.static(): Serves static files like HTML, CSS, JS, images, etc.
+2. express.json():
+ - Parses incoming requests with JSON payloads.
+ - Used in APIs that send/receive JSON.
+```
+// convert
+{
+  "name": "John"  = {name: 'john}
+}
+```
+3. express.urlencoded()
+  - Parses URL-encoded data from forms (like <form> submissions).
+```
+const express = require('express');
+const app = express();
 
+app.use(express.json()); // JSON payload
+app.use(express.urlencoded({ extended: true })); // form data //  extended: true means it can handle nested objects too.
+app.use(express.static('public')); // serve static files
 
+app.post('/data', (req, res) => {
+  console.log(req.body);
+  res.send('Data received!');
+});
+
+app.listen(3000, () => console.log('Server running...'));
+```
+## Error Handling Middleware:
+- Express js is capable of handling any sort of errors when occured bcz it has the tendency of default error -handlings and defined error handling.
+- A special kind of middleware in Express that catches errors during the request-response cycle
+  ```
+  (err, req, res, next)
+  -------------------------------------------------------
+  const express = require('express');
+  const app = express();
+  
+  // Regular middleware
+  app.get('/', (req, res) => {
+    throw new Error('Something went wrong!');
+  });
+  
+  // Error handling middleware
+  app.use((err, req, res, next) => {
+    console.error(err.stack); // Log the error
+    res.status(500).send('Something broke!');
+  });
+  
+  app.listen(3000, () => console.log('Server running'));
+  ------------------------------------------------------------
+  ```
+## Third-Party Middleware
+- Third-party middleware is a middleware function provided by an external library/package that you install via npm. It adds additional functionality to your app like logging, security, CORS, file uploads, and more.
+   
+## How to use
+- npm install <package-name>
+- npm install cors
+```
+const middleware = require('<package-name>');
+app.use(middleware());
+```
+```
+  const cors = require('cors');
+  app.use(cors()); // allow all origins by default
+```
+- npm install multer
+```
+const multer = require('multer');
+const upload = multer({ dest: 'uploads/' });
+
+app.post('/upload', upload.single('file'), (req, res) => {
+  res.send('File uploaded!');
+});
+```
+---- 
+# Routing
+- Routing refers to how an application responds to client requests to a particular endpoint (URL path) and HTTP method (GET, POST, etc.).
+- Routing = URL + HTTP method + handler function
+  
+| **Method** | **Use Case** |
+| ------ | ----------| 
+| GET |	Read / Fetch data |
+| POST |	Create / Submit data |
+| PUT |	Update existing data |
+| DELETE | Remove data |
 
 
 
