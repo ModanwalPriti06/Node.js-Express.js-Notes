@@ -285,7 +285,7 @@ fs.mkdir('newFolder', (err) => {
 4. Error handling Middleware ( app.use(err, req, res, next) )
 5. Third-party Middleware ( bodyparser, cookie parser ) 
 
-
+## Application-level Middleware: 
   
 
 
