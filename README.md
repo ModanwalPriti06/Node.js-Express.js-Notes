@@ -287,10 +287,62 @@ fs.mkdir('newFolder', (err) => {
 
 ## Application-level Middleware: 
   
+- Application-level middleware in Express is middleware that is bound to your entire app instance using app.use() or a specific HTTP method like app.get() or app.post().
+```
+const express = require('express');
+const app = express();
 
+// Application-level middleware
+app.use((req, res, next) => {
+  console.log(`${req.method} ${req.url}`);
+  next();
+});
 
+app.get('/', (req, res) => {
+  res.send('Home Page');
+});
 
+app.listen(3000, () => console.log('Server started'));
 
+```
+#### Common Use case 
+- Logging
+- Authentication
+- Body parsing (express.json())
+- CORS handling
+- Custom headers or response formatting
+  
+## Router level Middleware
+- Router-level middleware is just like application-level middleware, but it is bound to an Express Router instance instead of the whole app.
+- It helps keep your code modular and organized, especially in large apps.
+
+#### Common use cases
+- Authentication & Authorization
+- Role-based Access Control
+- Request Validation
+
+```
+const express = require('express');
+const app = express();
+const router = express.Router();
+
+// Router-level middleware
+router.use((req, res, next) => {
+  console.log('Router-level middleware');
+  next();
+});
+
+// Route in router
+router.get('/user', (req, res) => {
+  res.send('User route');
+});
+
+// Mount router to app
+app.use('/api', router);
+
+app.listen(3000, () => console.log('Server running'));
+
+```
 
 
 
