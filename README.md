@@ -243,7 +243,41 @@ fs.mkdir('newFolder', (err) => {
 - Stream is like watching a movie while it's still downloading.
 
 # Multer
+- In multer use to upload file and that file you can store in memory or disk.
+  
+### For Disk Storage
+- The disk storage engine gives you full control on storing files to disk.
+- install multer - npm i multer
+```
+const multer  = require('multer')
+// const upload = multer({ dest: '../uploads' })  // whatever file uploading keep in uploads folder
 
+// diskstorage
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    return cb(null, './uploads');
+  },
+  filename: function (req, file, cb) {
+    return cb(null, `${Date.now()}-${file.originalname}`);
+  }  
+})
+
+const upload = multer({ storage: storage })
+```
+In API -  for single file
+```
+router.post('/uploadFile', authTokenHandler, upload.single('notebookFile'), async (req, res) => {
+```
+In API -  for multiple file
+```
+router.post('/uploadFile', authTokenHandler, upload.single('notebookFile'), async (req, res) => {
+```
+### For Memory Storage
+- The memory storage engine stores the files in memory as Buffer objects. It doesn't have any options.
+```
+const storage = multer.memoryStorage()
+const upload = multer({ storage: storage })
+```
 
   ---
   ---
