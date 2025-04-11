@@ -287,7 +287,17 @@ app.get('/download', (req, res) => {
 ```
  reader.pipe(writer); // sends data chunk by chunk
 ```
-
+# Make any file zip
+- So creating any file zip - we have to read file then convert into zip then have to write that is process. but read and again convert in zip taking twise mb in memory so reducing the memory we can use stream only have to create zip file and have to send write with help of pipe() function
+- Solution : Stream Read --> Zipper ---> fs Write Stream 
+- Example:
+  ```
+  fs.createReadStream(filePath).pipe(
+  zlib,createGzip().pipe(                //zlib is library create file in zip
+    fs.createWriteStream('./sample.zip'))
+    )
+  ```
+  
 ## 💡 In Real Life:
 - Buffer is like downloading the whole movie before watching.
 - Stream is like watching a movie while it's still downloading.
@@ -328,7 +338,6 @@ router.post('/uploadFile', authTokenHandler, upload.single('notebookFile'), asyn
 const storage = multer.memoryStorage()
 const upload = multer({ storage: storage })
 ```
-
   ---
   ---
   ---
