@@ -225,9 +225,59 @@ fs.mkdir('newFolder', (err) => {
 # Buffer and Stream
 - A Buffer is a temporary storage in memory used to hold binary data (like files, images, videos, etc.) when you’re dealing with raw data.
 - A Stream is a sequence of data chunks being transferred over time (bit-by-bit), rather than loading everything into memory at once.
+  
 ## Why Streams?
 - Efficient: Don’t need to load entire file into memory.
 - Great for large files: e.g., video streaming, file downloads/uploads.
+- Piyush garg example: 
+  ```
+  app.get('/download', (req, res) => {
+  const filePath = 'path/to/largefile.pdf';
+  const readStream = fs.createReadStream(filePathm, "utf-8");
+  stream.on('data', (chunk) => res.write(chunk));
+  stream.on('end', () => res.end());
+  });
+  ```
+  - Normal Example
+```
+    const fs = require('fs');
+    
+    // Create a readable stream from an input file
+    const readStream = fs.createReadStream('input.txt');
+    
+    // Create a writable stream to an output file
+    const writeStream = fs.createWriteStream('output.txt');
+    
+    // Pipe the read stream into the write stream
+    readStream.pipe(writeStream);
+    
+    // Log when it's done
+    readStream.on('end', () => {
+      console.log('File copied successfully using streams!');
+    });
+    
+    // Error handling
+    readStream.on('error', (err) => {
+      console.error('Read error:', err);
+    });
+    writeStream.on('error', (err) => {
+      console.error('Write error:', err);
+    });
+```
+- pipe(): The .pipe() method connects a readable stream to a writable stream. It automatically handles backpressure — so it won’t overload the destination.
+
+#### Real-Life Example: Sending large files to client (download API)
+```
+app.get('/download', (req, res) => {
+  const filePath = 'path/to/largefile.pdf';
+  const fileName = 'downloadedfile.pdf';
+
+  res.setHeader('Content-Disposition', `attachment; filename="${fileName}"`);
+
+  const readStream = fs.createReadStream(filePath);
+  readStream.pipe(res);
+});
+```
 
 ## 4 Types of Streams:
 1. Readable – e.g., fs.createReadStream()
