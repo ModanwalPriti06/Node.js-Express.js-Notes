@@ -36,6 +36,17 @@
 - ✅ Uses an asynchronous I/O model – Perfect for real-time applications like chat apps, APIs, and streaming services.
 <img width="780" alt="node js 2025-03-21 at 4 13 19 PM" src="https://github.com/user-attachments/assets/1eb1f606-7e41-4680-85bf-1604b939a18c" />
 
+### npm (Node Package Manager)
+- It's used to manage the dependency for your node project.
+
+### node_module
+- node module folder contain all the dependencies of the node project.
+
+### what is the role of package.json file in node project
+- It keeps track of everything your project needs and is. Describes your project + manages its dependencies, scripts, metadata, and more.
+- Defines project metadata
+- Manages dependencies
+
 ###  Why Use Node.js?
 -  Scalable & lightweight – Ideal for microservices and APIs.
 -  Fast performance – Uses the V8 engine for high-speed execution.
