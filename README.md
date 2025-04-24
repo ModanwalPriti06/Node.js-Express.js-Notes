@@ -62,7 +62,12 @@
 ### Window Vs Global Object
 - The javascript global object for the browser is window and for the nodejs is global
 - The window object contain the method and property available only inthe browser environment.
-
+- You can use globalThis in both environments — it's a unified global object:
+  ```
+  globalThis.message = "Hello World!";
+  console.log(globalThis.message); // Works in both browser & Node.js
+  ```
+  
 # Node.js Architecture (Single-threaded, Event Loop, Non-blocking I/O)
 
 ## Event loop
