@@ -239,8 +239,8 @@ fs.mkdir('newFolder', (err) => {
 - Use path module to handle file paths safely
   
 # Buffer and Stream
-- A Buffer is a temporary storage in memory used to hold binary data (like files, images, videos, etc.) when you’re dealing with raw data.
-- A Stream is a sequence of data chunks being transferred over time (bit-by-bit), rather than loading everything into memory at once.
+- A Buffer is a temporary storage in memory used to hold binary data (like files, images, videos, etc.) when you’re dealing with raw data. Buffer and array have some similarities, but the difference is that array can be any type, and it can be resizable. Buffers only deal with binary data, and it can not be resizable. 
+- A Stream is a sequence of data chunks being transferred over time (bit-by-bit), rather than loading everything into memory at once. Stream efficient processing of large volumes of data, especially in situations where the data size is too large to fit into memory all at once.
   
 ## Why Streams?
 - Efficient: Don’t need to load entire file into memory.
