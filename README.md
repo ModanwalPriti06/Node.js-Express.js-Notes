@@ -9,6 +9,7 @@
 - 🔹 Working with File System (fs module)
 - 🔹 Multer
 - 🔹 Express Js
+- Timer Module - setTimeout/ setInterval
 
 ---
 
