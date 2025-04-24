@@ -341,7 +341,7 @@ router.post('/uploadFile', authTokenHandler, upload.single('notebookFile'), asyn
 ```
 In API -  for multiple file
 ```
-router.post('/uploadFile', authTokenHandler, upload.single('notebookFile'), async (req, res) => {
+router.post('/uploadFile', authTokenHandler, upload.array('notebookFile'), async (req, res) => {
 ```
 ### For Memory Storage
 - The memory storage engine stores the files in memory as Buffer objects. It doesn't have any options.
