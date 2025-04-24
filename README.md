@@ -574,4 +574,11 @@ export default function greet(name) {
 import greet from './greet.js';
 ```
 
+##  What is REPL in Node.js?
+- REPL stands for:
+🔁 Read
+📥 Eval
+📤 Print
+🛑 Loop
+- It is a command-line tool that lets you interactively write and run JavaScript code directly in the terminal.
 
