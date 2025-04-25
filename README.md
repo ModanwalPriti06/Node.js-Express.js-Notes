@@ -363,6 +363,7 @@ const upload = multer({ storage: storage })
 
 ### What is Express jS?
 - Express.js is a minimal and flexible Node.js web application framework that helps you build web servers and APIs quickly and efficiently.
+- Hosting of Node.js projects
 
 ### Why Use Express?
 - Routing - Simplifies creating routes (GET, POST, etc.)
@@ -583,3 +584,74 @@ import greet from './greet.js';
 🛑 Loop
 - It is a command-line tool that lets you interactively write and run JavaScript code directly in the terminal.
 
+# Timers Module
+- The Timers module in NodeJS contains various functions that allow us to execute a block of code or a function after a set period. The Timers module is global, we do not need to use require() to import it.
+
+### setTimeout Vs setInterval 
+
+#### setTimeout: 
+- The setTimeout() function is used to execute a function once after a specified delay (in milliseconds).
+- Syntax: 
+```
+setTimeout(callback, delay, [arg1, arg2, ...]);
+```
+#### setImmediate() method
+- The setImmediate() function is used to execute a callback function immediately after the current event loop cycle, i.e., after the I/O events in the Node.js event loop have been processed. It is similar to setTimeout() with a delay of 0 milliseconds, but it differs in terms of when the function is executed.
+- Syntax
+```
+setImmediate(callback, [arg1, arg2, ...]);
+```
+#### setInterval() method
+- The setInterval() function is used to execute a function repeatedly, with a fixed time delay between each call.
+```
+  setInterval(callback, delay, [arg1, arg2, ...]);
+```
+### What are the three methods to avoid callback hell?
+- The three methods to avoid callback hell are:
+
+1. Using async/await()
+2. Using promises
+3. Using generators
+
+### What is a .body-parser in NodeJS?
+- Body-parser is the NodeJS body-parsing middleware. It is responsible for parsing the incoming request bodies in a middleware before you handle it. It is an NPM module that processes data sent in HTTP requests.
+
+###  What is a cluster in NodeJS?
+- Node.js runs your app using a single thread by default (just one CPU core).
+- But modern computers have multiple cores, right?
+- ➡️ Cluster lets you run multiple instances of your Node.js app using all CPU cores to handle more traffic and improve performance.
+
+### Why use Cluster?
+1. Handles more users/requests
+2. Takes full advantage of multi-core CPUs
+3. Improves performance of heavy apps
+
+### Explain some of the cluster methods in NodeJS
+1. Fork(): It creates a new child process from the master. The isMaster returns true if the current process is master or else false.
+2. isWorker: It returns true if the current process is a worker or else false.
+3. process: It returns the child process which is global.
+4. send(): It sends a message from worker to master or vice versa.
+5. kill(): It is used to kill the current worker.
+
+### How to manage sessions in NodeJS?
+Session management can be done in NodeJS by using the express-session module. It helps in saving the data in the key-value form. In this module, the session data is not saved in the cookie itself, just the session ID.
+
+### Explain the NodeJS Redis module.
+- Redis is an Open Source store for storing data structures. It is used in multiple ways. It is used as a database, cache, and message broker. It can store data structures such as strings, hashes, sets, sorted sets, bitmaps, indexes, and streams. Redis is very useful for NodeJS developers as it reduces the cache size which makes the application more efficient. However, it is very easy to integrate Redis with NodeJS applications.
+
+### What is web socket?
+- Web Socket is a protocol that provides full-duplex (multiway) communication i.e. allows communication in both directions simultaneously. Web Socket is a modern web technology in which there is a continuous connection between the user’s browser (client) and the server. In this type of communication, between the web server and the web browser, both of them can send messages to each other at any point in time.
+
+### MVC Architecture
+- MVC stands for Model View Controller. The Model-View-Controller (MVC) framework is a way of organizing code for web applications. It separates the application into three parts: the Model, the View, and the Controller. 
+Example:
+```
+// Controller
+app.get('/user/:id', (req, res) => {
+  User.findById(req.params.id)       // → Model
+    .then(user => res.render('user', { user })); // → View
+});
+```
+1. Model: User (MongoDB schema)
+2. View: HTML/EJS template
+3. Controller: app.get() handler
