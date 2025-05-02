@@ -48,6 +48,18 @@
 - Defines project metadata
 - Manages dependencies
 
+## Dependency and Dev Dependecy
+### dependency:
+- These are the packages that are required for your application to run.
+- They are the core libraries and tools that your project needs to function correctly in a production environment.
+- When are they installed? When you run npm install
+- Example: express, mongoose, axios etc.
+
+### dev-dependency
+- These are the packages that are required for development purposes only, such as testing, building, linting, and other tasks that aren't necessary for the application to run in production.
+- These packages are typically used during the development phase and are not needed when the app is running in production.
+- These dependencies are installed if you run npm install --save-dev or when you install the dependencies in a development environment. 
+
 ###  Why Use Node.js?
 -  Scalable & lightweight – Ideal for microservices and APIs.
 -  Fast performance – Uses the V8 engine for high-speed execution.
