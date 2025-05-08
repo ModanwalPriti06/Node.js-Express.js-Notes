@@ -58,7 +58,14 @@
 ### dev-dependency
 - These are the packages that are required for development purposes only, such as testing, building, linting, and other tasks that aren't necessary for the application to run in production.
 - These packages are typically used during the development phase and are not needed when the app is running in production.
-- These dependencies are installed if you run npm install --save-dev or when you install the dependencies in a development environment. 
+- These dependencies are installed if you run npm install --save-dev or when you install the dependencies in a development environment.
+```
+"devDependencies": {
+  "eslint": "^8.0.0",
+  "nodemon": "^2.0.0",
+  "jest": "^29.0.0"
+}
+```
 
 ###  Why Use Node.js?
 -  Scalable & lightweight – Ideal for microservices and APIs.
