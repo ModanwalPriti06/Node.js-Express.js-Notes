@@ -40,13 +40,15 @@
 ### npm (Node Package Manager)
 - It's used to manage the dependency for your node project.
 
+###  npx vs npm:
+- npm: Installs and manages dependencies in your project.
+- npx: Executes packages without needing to install them globally or add them as dependencies. It's used for running binaries or one-off commands.
+  
 ### node_module
 - node module folder contain all the dependencies of the node project.
 
 ### what is the role of package.json file in node project
-- It keeps track of everything your project needs and is. Describes your project + manages its dependencies, scripts, metadata, and more.
-- Defines project metadata
-- Manages dependencies
+- The package.json file is the core configuration file for any Node.js project. It contains metadata about the project and is used to manage project dependencies, scripts, versioning, and more.
 
 ## Dependency and Dev Dependecy
 ### dependency:
@@ -675,3 +677,7 @@ app.get('/user/:id', (req, res) => {
 1. Model: User (MongoDB schema)
 2. View: HTML/EJS template
 3. Controller: app.get() handler
+
+## The difference between __dirname and __filename in Node.js is:
+- __dirname gives the absolute path of the directory that contains the current file.
+- __filename gives the absolute path of the current file itself, including its file name.
