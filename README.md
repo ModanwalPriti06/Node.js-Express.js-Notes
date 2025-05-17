@@ -9,7 +9,8 @@
 - 🔹 Working with File System (fs module)
 - 🔹 Multer
 - 🔹 Express Js
-- Timer Module - setTimeout/ setInterval
+- 🔹 CSR & SCR
+- 🔹 Timer Module - setTimeout/ setInterval
 
 ---
 
@@ -681,3 +682,71 @@ app.get('/user/:id', (req, res) => {
 ## The difference between __dirname and __filename in Node.js is:
 - __dirname gives the absolute path of the directory that contains the current file.
 - __filename gives the absolute path of the current file itself, including its file name.
+
+## CSR Vs SSR
+ ### Server Side Rendering (SSR):
+- In SSR, the backend sends a fully rendered HTML page to the browser.
+- The data is fetched and injected into the HTML on the server itself before it is sent.
+- This ensures that when the browser loads the page, it already has all the data.
+- SSR is great for SEO (Search Engine Optimization) because search engines can easily crawl the pre-rendered content.
+- Frameworks like Next.js, or using Express with EJS/Pug templates, enable SSR.
+
+```
+app.get("/user", (req, res) => {
+  res.render("user", { name: "John Doe" });  // HTML is rendered on the server
+});
+```
+my-app/
+├── views/
+│   └── user.ejs
+├── server.js
+
+```
+<!-- views/user.ejs -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User Page</title>
+</head>
+<body>
+  <h1>Welcome, <%= name %>!</h1>
+</body>
+</html>
+```
+```
+const express = require("express");
+const app = express();
+const PORT = 3000;
+
+// Set EJS as the view engine
+app.set("view engine", "ejs");
+
+// Define a route that renders the EJS template
+app.get("/user", (req, res) => {
+  res.render("user", { name: "John Doe" }); // Render user.ejs with data
+});
+
+app.listen(PORT, () => {
+  console.log(`Server running at http://localhost:${PORT}`);
+});
+
+```
+### Client Side Rendering (CSR):
+- In CSR, the browser receives a basic HTML shell.
+- JavaScript then runs on the client side to fetch data and render the page dynamically.
+- The user initially sees a blank or loading screen until JavaScript finishes loading and rendering.
+- CSR is good for highly interactive apps (like SPAs), but not ideal for SEO.
+```
+useEffect(() => {
+  fetch("/api/user")
+    .then(res => res.json())
+    .then(data => setUser(data));
+}, []);
+```
+### ✅ What is a Wildcard in Web Development / Node.js / Routing?
+- A wildcard is a character or symbol used to represent any value or pattern dynamically. In Node.js/Express, wildcards are commonly used in routes, file paths, regex, and query matching.
+```
+app.get("/*", (req, res) => {
+  res.send("Root doesn't exist"); // Render user.ejs with data
+});
+```
