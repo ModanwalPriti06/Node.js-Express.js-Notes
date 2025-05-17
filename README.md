@@ -1,4 +1,4 @@
-# Index
+![image](https://github.com/user-attachments/assets/db3dfc4b-15ff-43d7-9a57-7c386e78b6d2)# Index
 ## Core Node.js Concepts
 - 🔹 Node.js Modules (CommonJS vs. ES Modules)
 - 🔹 Built-in Modules (fs, path, http, crypto, events, os, etc.)
@@ -94,6 +94,9 @@
 # Node.js Architecture (Single-threaded, Event Loop, Non-blocking I/O)
 
 ## Event loop
+
+![image](https://github.com/user-attachments/assets/b544d9f5-b821-432e-b9c6-44a88bbad9d4)
+
 - The event loop in JavaScript is a mechanism that handles asynchronous operations. JavaScript is single-threaded, meaning it executes code sequentially in a single call stack.
 - Everything in Javascript happened in execution context.
 ```
