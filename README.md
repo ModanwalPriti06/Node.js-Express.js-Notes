@@ -97,6 +97,10 @@
 
 ![image](https://github.com/user-attachments/assets/b544d9f5-b821-432e-b9c6-44a88bbad9d4)
 
+![image](https://github.com/user-attachments/assets/c4cb674c-102c-4d24-90d4-656492a6a1e8)
+
+![image](https://github.com/user-attachments/assets/926e5f38-eb63-4fa3-bd75-573105116d32)
+
 - The event loop in JavaScript is a mechanism that handles asynchronous operations. JavaScript is single-threaded, meaning it executes code sequentially in a single call stack.
 - Everything in Javascript happened in execution context.
 ```
@@ -307,7 +311,7 @@ fs.mkdir('newFolder', (err) => {
       console.error('Write error:', err);
     });
 ```
-- pipe(): The .pipe() method connects a readable stream to a writable stream. It automatically handles backpressure — so it won’t overload the destination.
+- pipe(): The .pipe() method connects a readable stream to a writable stream. It automatically handles backpressure — so it won’t overload the destination. Pipe function send data directly to client automatically without asked ending the code such as res.end();
 
 #### Real-Life Example: Sending large files to client (download API)
 ```
