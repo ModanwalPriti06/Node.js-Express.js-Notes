@@ -51,6 +51,10 @@
 ### what is the role of package.json file in node project
 - The package.json file is the core configuration file for any Node.js project. It contains metadata about the project and is used to manage project dependencies, scripts, versioning, and more.
 
+### package.lock.json
+- Purpose: Records the exact versions of each installed package (and sub-dependencies), to make installs reproducible.
+- package-lock.json as the snapshot of your installed packages.
+
 ## Dependency and Dev Dependecy
 ### dependency:
 - These are the packages that are required for your application to run.
