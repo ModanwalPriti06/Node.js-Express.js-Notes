@@ -761,3 +761,42 @@ app.get("/*", (req, res) => {
   res.send("Root doesn't exist"); // Render user.ejs with data
 });
 ```
+---
+# MCQ
+1. Node inspector is a debugging tool for NodeJS
+2. variable in REPL session of NodeJS is used for -> It's used to get last result.
+3. is a software service that allows 2 or more applications to talk to each other? -> API
+4. is an interactive shell that processes Node? -> REPL
+5. Default scope in Node.js application is? -> Local
+6. How can we check the installed version of Node? -> node -v or node -version
+7. How many node objects methods are available? -> 18
+8. JSON was natively constructed on which language? -> Javascript
+9. A visual development environment for NodeJS is? -> Node-Red
+10. We can kill a process in Node.js using the keyboard shortcut? -> Ctrl+C
+11. What function is used to fire an event? -> emit()
+12. The process.cwd() is used to return the current working directory of the current process.
+13. Jade, Vash, and Handlebars are template engines that can be used with Node.js.
+14. The path.isAbsolute() tell the path is absolute or not. It needed complete detail to locate the file.
+15. The socket.send() is used to send the message from one socket to another socket. It takes the argument as length, address, callback, and messages.
+16. fs.stat() method in Node.js is used to get the information about the given file or directory. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
