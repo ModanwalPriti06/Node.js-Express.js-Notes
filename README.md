@@ -761,6 +761,22 @@ app.get("/*", (req, res) => {
   res.send("Root doesn't exist"); // Render user.ejs with data
 });
 ```
+
+### What is control flow in Node.js?
+- Control flow refer to the order in which code statement and function are executed, managing asynchronous operation and error handling.
+
+### REPL
+- Read, Evaluate, Print and Loop. It's an interactive environment for executing Node.js code and debugging.
+
+### what is body-parser in node.js?
+- Body-parser is a middleware that parse incoming request bodies in a middleware before it in handling node.js application.
+
+### How to read commond line arguments in Node.js
+- By using process.argv array to access commond line arguments passed when running in Node.js application.
+
+### What is child process in Node.js
+- Child process allow Node js to handle the multiple task concurrency by creating subprocess that can run independently.
+  
 ---
 # MCQ
 1. Node inspector is a debugging tool for NodeJS
