@@ -185,7 +185,7 @@ setImmediate
 
 # Concept of Libuv
 - Libuv is an open-source libarary built-in C, It has a strong focus on asynchronous and I/O. This give node access tothe underlying computer OS, filesystem and networking.
-- ode.js uses libuv to manage a thread pool for handling heavy tasks like file system operations, cryptography, and networking.
+- Node.js uses libuv to manage a thread pool for handling heavy tasks like file system operations, cryptography, and networking.
 - Libuv implement two extrenely important feature of node.js
   - Event Loop
   - Thread Pool
